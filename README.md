@@ -107,7 +107,66 @@ template.py
     This template.py will create all the folders and files needed..
     execute that to understand the same..
 
+we have init.py file on every folder..
+    In python we have Folder , Module etc..
+    The .py file is called Module..
+    Folder + Module = Package
+
+    pandas , numpy , sklearn , tensorflow are all packages..
+    we have folder and code is written inside that as .py file as class / functions etc..
+
+    we write 
+        tensorflow -- Folder
+            -tensorflow.py -- Module
+                -mytensor class -- Class 
+                - mytens function - function
+        Above all together is called PACKAGE
+        PACKAGE is FOLDER --> MODULE --> CLASS / FUNCTION    
+    from tensorflow.tensorflow import mytensor
+    from sklearn.linearmodel import LinearRegression
+
+    In our case we have  , package is .. we have created our own package..
+    src
+        DiamondPrediction
+            components
+                class
+                function
+
+    
+    for pandas , we do pip install pandas
+    how python will get to know our package ?
+        we need to create __init__.py file .. so this is rule from python side to show our folder as a local or custom package..
 
 
+ways to install custom package / local package
+
+1 . pip install .
+2. -e . in requirements.txt
+3. python setup.py install in setup.py file
+
+1st method..
+Delete the env already created
+run the init_setup.sh  file..using the command bash init_setup.sh
+pip list --> lists all packages available
+but not the local package , ours which is DiamondPrediction
+for that to be installed run the following command
+python setup.py install
+then do pip list , it lists DimondPricePrediction as package installed as well..
+
+now we also see on the left 2 more folders
+build
+DiamondPricePrediction.egg-info and few files inside that
+now if we want to give our package - DiamondPricePrediction -  to another person , we will deploy that file to pypy directory and get it with pip install
+
+2nd method - delete build folder , dist folder , DiamondPricePrediction.egg-info folder also..
+to uninstall DiamondPricePrediction package ,command -->  pip uninstall DiamondPricePrediction , this will remove the installed package..
+check with pip list..
+
+requirements.txt --> add -e . , and again run pip install -r requirements.txt , this will also install the package..
+this internally calls setup.py file only..
+
+
+
+good practice - we also need to ensure we install other packages while consuming the DiamondPrediction ,so ensure to include all locally installed packages also in setup.py , so anyone who installs our package DiamondPreditction also installs other required packages too
 
 
