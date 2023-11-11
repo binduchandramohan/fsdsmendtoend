@@ -179,3 +179,8 @@ data_transformation.py
 model_trainer.py
 
 1. Create a Class inside each of the .py file
+
+logger.py file - log all changes
+    log folder and this will have log files inside , the file can be named with date and time 
+exception.py file - we are creating our own custom exception class
+utils.py file - helper module , where we write the helper code
