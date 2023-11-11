@@ -170,3 +170,12 @@ this internally calls setup.py file only..
 good practice - we also need to ensure we install other packages while consuming the DiamondPrediction ,so ensure to include all locally installed packages also in setup.py , so anyone who installs our package DiamondPreditction also installs other required packages too
 
 
+29th Oct 2023
+
+Modular Coding
+
+data_ingestion.py
+data_transformation.py
+model_trainer.py
+
+1. Create a Class inside each of the .py file

@@ -5,4 +5,4 @@ class DataIngestion:
         pass
 
     def initiate_data_ingestion(self):
-        
+        pass
