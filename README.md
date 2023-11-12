@@ -188,3 +188,39 @@ logger.py file - log all changes
     log folder and this will have log files inside , the file can be named with date and time 
 exception.py file - we are creating our own custom exception class
 utils.py file - helper module , where we write the helper code
+
+
+exception.py file - to handle all exceptions and return filename ,error number and actual error
+
+data_ingestion.py file
+    import required packages , also local package's logger and exception
+
+    dataclasses:config & artifacts
+        DataIngestion -- gives raw data as output
+        DataTransformation -- gives transformed data as output / data ready for the model - preprocessed object
+        ModelTrainer -- gives model as output
+        In terms of ML , all the above outputs are called Artifacts , so Artifcacts folder collects all outputs from Components..
+
+    we are collecting all the above outputs as csv in artifacts folder within data_ingestion.py file
+
+training_pipeline.py file
+    write code to create object for DataIngestion class inside training_pipeline.py file
+    and call the method initiate_data_ingestion , to create the artifact folder and 3 .csv files inside...
+    
+
+    '''
+    from src.DimondPricePrediction.components.data_ingestion import DataIngestion
+
+    import os
+    import sys
+    from src.DimondPricePrediction.logger import logging 
+    from src.DimondPricePrediction.exception import customexception
+
+    import pandas as pd
+
+
+    obj=DataIngestion()
+
+    obj.initiate_data_ingestion()
+    '''
+
