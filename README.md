@@ -140,6 +140,10 @@ we have init.py file on every folder..
 
 ways to install custom package / local package
 
+ensure the path in the terminal is pointing to the current dir where we have the file / package and then do bash init_setup.sh and select this env , Visual Studio asks about the new env created , select that 
+else we end up with issues !! , for instance importing the local package keeps failing !!!
+else do --> source activate ./env  , after the env is created using --> bash init_setup.sh
+
 1 . pip install .
 2. -e . in requirements.txt
 3. python setup.py install in setup.py file
