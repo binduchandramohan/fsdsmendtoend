@@ -206,7 +206,7 @@ data_ingestion.py file
 training_pipeline.py file
     write code to create object for DataIngestion class inside training_pipeline.py file
     and call the method initiate_data_ingestion , to create the artifact folder and 3 .csv files inside...
-    
+
 
     '''
     from src.DimondPricePrediction.components.data_ingestion import DataIngestion
@@ -224,3 +224,8 @@ training_pipeline.py file
     obj.initiate_data_ingestion()
     '''
 
+data_transformation.py file
+
+model_trainer.py file
+
+utils.py file
